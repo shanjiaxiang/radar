@@ -39,14 +39,25 @@ public class BaseView extends View {
         Paint paint1 = genPaint(Color.YELLOW, Paint.Style.STROKE, 2);
         Paint paint2 = genPaint(Color.GREEN, Paint.Style.STROKE, 2);
 
+        paint1.setColor(Color.RED);
+        paint1.setStrokeWidth(1);
+        paint1.setAntiAlias(true);
+        paint1.setTextSize(40);
 
-        Rect rect = new Rect(0,0,200, 200);
-        canvas.drawRect(rect,paint1);
+        paint1.setTextAlign(Paint.Align.CENTER);
+        paint1.setStyle(Paint.Style.FILL);
+        canvas.drawText("床前明月光", 400,200,paint1);
 
-        canvas.translate(100,100);
-        canvas.drawRect(rect,paint2);
+        paint1.setTextAlign(Paint.Align.LEFT);
+        paint1.setStyle(Paint.Style.STROKE);
+        canvas.drawText("床前明月光", 400,400,paint1);
 
-
+        paint1.setTextAlign(Paint.Align.RIGHT);
+        paint1.setStyle(Paint.Style.FILL_AND_STROKE);
+        paint1.setUnderlineText(true);
+        paint1.setStrikeThruText(true);
+        paint1.setFakeBoldText(true);
+        canvas.drawText("床前明月光", 400,600,paint1);
 
     }
 

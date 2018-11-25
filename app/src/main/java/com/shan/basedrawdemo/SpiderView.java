@@ -62,6 +62,10 @@ public class SpiderView extends View {
         drawLines(canvas);
 
         drawRegion(canvas);
+
+
+
+
     }
 
     //绘制网格
@@ -137,5 +141,8 @@ public class SpiderView extends View {
         valuePaint = new Paint();
         valuePaint.setStyle(Paint.Style.FILL);
         valuePaint.setColor(Color.BLUE);
+
+
+
     }
 }
